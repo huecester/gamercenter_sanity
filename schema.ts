@@ -56,14 +56,53 @@ export interface Bot extends SanityDocument {
    *
    *
    */
-  description?: Array<SanityKeyed<SanityBlock>>;
+  description?: Array<
+    | SanityKeyed<SanityBlock>
+    | SanityKeyed<{
+        _type: 'image';
+        asset: SanityReference<SanityImageAsset>;
+        crop?: SanityImageCrop;
+        hotspot?: SanityImageHotspot;
+      }>
+  >;
 
   /**
    * Invite Link — `string`
    *
    *
    */
-  invite_link?: string;
+  inviteLink?: string;
 }
 
-export type Documents = Bot;
+/**
+ * Post
+ *
+ *
+ */
+export interface Post extends SanityDocument {
+  _type: 'post';
+
+  /**
+   * Title — `string`
+   *
+   *
+   */
+  title?: string;
+
+  /**
+   * Body — `array`
+   *
+   *
+   */
+  body?: Array<
+    | SanityKeyed<SanityBlock>
+    | SanityKeyed<{
+        _type: 'image';
+        asset: SanityReference<SanityImageAsset>;
+        crop?: SanityImageCrop;
+        hotspot?: SanityImageHotspot;
+      }>
+  >;
+}
+
+export type Documents = Bot | Post;
