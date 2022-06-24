@@ -2,4 +2,5 @@
 Sanity Content Studio for gamercenter.
 
 ## TODO
-- [ ] Posts
+- [x] Posts
+- [ ] Image alt text
