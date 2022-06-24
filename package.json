@@ -10,13 +10,17 @@
     "start": "sanity start",
     "build": "sanity build",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "codegen": "sanity-codegen"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
     "@babel/core": ">=7.13.0 <8.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
     "@sanity/base": "^2.30.1",
     "@sanity/color": "^2.0",
     "@sanity/core": "^2.30.2",
@@ -27,10 +31,13 @@
     "@sanity/vision": "^2.30.1",
     "caniuse-lite": "^1.0.30000697",
     "eslint": "^8.6.0",
+    "jsdom": ">=10.0.0",
+    "prettier": "^2.0.0",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
     "react-is": ">= 16.8.0",
+    "sanity-codegen": "^0.9.8",
     "styled-components": "^5.2.0",
     "typescript": "^4.7.4",
     "webpack": ">= 1.0.0"
