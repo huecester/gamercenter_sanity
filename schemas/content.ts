@@ -1,9 +1,9 @@
+import image from './image';
+
 export default {
-	name: 'content',
 	type: 'array',
 	of: [
 		{ type: 'block' },
-		{ type: 'image' },
+		image,
 	],
-	title: 'Content',
 };

@@ -63,6 +63,13 @@ export interface Bot extends SanityDocument {
         asset: SanityReference<SanityImageAsset>;
         crop?: SanityImageCrop;
         hotspot?: SanityImageHotspot;
+
+        /**
+         * Alt Text — `string`
+         *
+         *
+         */
+        alt?: string;
       }>
   >;
 
@@ -101,6 +108,13 @@ export interface Post extends SanityDocument {
         asset: SanityReference<SanityImageAsset>;
         crop?: SanityImageCrop;
         hotspot?: SanityImageHotspot;
+
+        /**
+         * Alt Text — `string`
+         *
+         *
+         */
+        alt?: string;
       }>
   >;
 }
