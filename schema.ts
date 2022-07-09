@@ -52,6 +52,25 @@ export interface Bot extends SanityDocument {
   name?: string;
 
   /**
+   * Icon — `image`
+   *
+   *
+   */
+  icon?: {
+    _type: 'image';
+    asset: SanityReference<SanityImageAsset>;
+    crop?: SanityImageCrop;
+    hotspot?: SanityImageHotspot;
+
+    /**
+     * Alt Text — `string`
+     *
+     *
+     */
+    alt?: string;
+  };
+
+  /**
    * Description — `array`
    *
    *
